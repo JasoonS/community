@@ -15,7 +15,10 @@ and app.bundle: com.visualstudio.code.oss
 os: mac
 and app.bundle: com.todesktop.230313mzl4w4u92
 """
+
 mod.apps.vscode = """
+os: linux
+and app.name: Cursor
 os: linux
 and app.name: Code
 os: linux

@@ -124,7 +124,7 @@ class Actions:
         """Shows the cursor"""
         show_cursor_helper(True)
 
-    def mouse_hide_cursor():
+    def mouse_hide_cursor():9
         """Hides the cursor"""
         show_cursor_helper(False)
 
