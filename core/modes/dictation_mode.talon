@@ -1,6 +1,10 @@
 mode: dictation
 -
 
+settings():
+    speech.timeout = 0.8
+
+
 ^press <user.modifiers>$: key(modifiers)
 ^press <user.keys>$: key(keys)
 
