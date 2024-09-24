@@ -33,3 +33,8 @@ mark inbox channel read: user.discord_mark_inbox_read()
 [toggle] (deafen | undeafen): user.discord_deafen()
 answer call: user.discord_answer_call()
 decline call: user.discord_decline_call()
+
+next unread: key(shift-alt-down)
+previous unread: key(shift-alt-up)
+
+next mention: key(ctrl-shift-alt-down)

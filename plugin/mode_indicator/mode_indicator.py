@@ -58,7 +58,9 @@ mod.setting("mode_indicator_color_deep_sleep", type=str)
 mod.setting("mode_indicator_color_dictation", type=str)
 mod.setting("mode_indicator_color_mixed", type=str)
 mod.setting("mode_indicator_color_command", type=str)
+mod.setting("mode_indicator_color_whisper", type=str)
 mod.setting("mode_indicator_color_other", type=str)
+
 
 
 setting_values = {
@@ -76,6 +78,7 @@ setting_values = {
         "user.mode_indicator_color_dictation",
         "user.mode_indicator_color_mixed",
         "user.mode_indicator_color_command",
+        "user.mode_indicator_color_whisper",
         "user.mode_indicator_color_other",
     )
 }
@@ -94,6 +97,8 @@ def get_mode_color() -> str:
         return settings.get("user.mode_indicator_color_mixed")
     elif current_mode == "command":
         return settings.get("user.mode_indicator_color_command")
+    elif current_mode == "whisper":
+        return settings.get("user.mode_indicator_color_whisper")
     else:
         return settings.get("user.mode_indicator_color_other")
 
@@ -201,11 +206,13 @@ def update_indicator():
     elif canvas:
         hide_indicator()
 
-
+# Whisper mode is working.
 def on_update_contexts():
     global current_mode
     modes = scope.get("mode")
-    if "sleep" in modes:
+    if "user.whisper" in modes:
+        mode = "whisper"
+    elif "sleep" in modes:
         mode = "sleep"
     elif "dictation" in modes:
         if "command" in modes:
@@ -218,6 +225,7 @@ def on_update_contexts():
         mode = "other"
 
     if current_mode != mode:
+        print(f"Updating current mode: {mode} from {current_mode}")  # Debug print to show current mode
         current_mode = mode
         update_indicator()
 

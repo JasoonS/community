@@ -27,6 +27,8 @@ settings():
     user.mode_indicator_color_mixed = "3cb371"
     # CornflowerBlue color for command mode
     user.mode_indicator_color_command = "6495ed"
+    # Red for openAI whisper
+    user.mode_indicator_color_whisper = "f80102"
     # GhostWhite color for other modes
     user.mode_indicator_color_other = "f8f8ff"
 

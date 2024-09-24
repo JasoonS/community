@@ -32,6 +32,13 @@ class ActionsAwakeMode:
         actions.app.notify("Talon is already awake")
 
 
+class ModeState:
+    def __init__(self):
+        self.previous_mode = None
+        self.speech_enabled = None
+
+mode_state = ModeState()
+
 @mod.action_class
 class Actions:
     def command_mode():
@@ -76,3 +83,26 @@ class Actions:
                 actions.user.dragon_engine_wake()
                 # note: this may not do anything for all versions of Dragon. Requires Pro.
                 actions.user.dragon_engine_normal_mode()
+
+    def whisper_mode():
+        """Enter whisper mode"""
+        print("Entering whisper mode")
+        # mode_state.previous_mode = actions.mode.current()
+        mode_state.speech_enabled = actions.speech.enabled()
+        actions.mode.disable("command")
+        actions.mode.enable("user.whisper")
+
+    def stop_whisper_mode():
+        """Exit whisper mode and restore previous state"""
+        print("Exiting whisper mode")
+        actions.mode.disable("user.whisper")
+        actions.mode.enable("command")
+        # if mode_state.previous_mode:
+        #     actions.mode.enable(mode_state.previous_mode)
+        if mode_state.speech_enabled:
+            actions.speech.enable()
+            print("Speech enabled")
+        else:
+            actions.speech.disable()
+            actions.mode.disable("command")
+            print("Speech DISabled")
