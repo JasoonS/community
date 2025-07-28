@@ -12,8 +12,17 @@ google: https://www.google.com/
 google calendar: https://calendar.google.com
 google maps: https://maps.google.com/
 google scholar: https://scholar.google.com/
-gmail: https://mail.google.com/
+gmail personal: https://mail.google.com/mail/u/2/
+gmail envio: https://mail.google.com/mail/u/0/
+chatGpt: https://https://chatgpt.com/
 github: https://github.com/
 gist: https://gist.github.com/
 wikipedia: https://en.wikipedia.org/
 youtube: https://www.youtube.com/
+
+github envio argocd: https://github.com/enviodev/argocd
+github envio hypersync: https://github.com/enviodev/hypersync
+github envio hyperindex: https://github.com/enviodev/hyperindex
+github envio hypersync client rust: https://github.com/enviodev/hyperindex-client-rust
+github envio hypersync client python: https://github.com/enviodev/hyperindex-client-python
+github envio hypersync client node: https://github.com/enviodev/hyperindex-client-node

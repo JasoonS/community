@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: jasoons-laptop
+-
+user: /home/jasoons
+desktop: /home/jasoons/Desktop
+desk: /home/jasoons/Desktop
+documents: /home/jasoons/Documents
+docks: /home/jasoons/Documents
+downloads: /home/jasoons/Downloads
+music: /home/jasoons/Music
+pictures: /home/jasoons/Pictures
+videos: /home/jasoons/Videos
+talon home: /home/jasoons/.talon
+talon recordings: /home/jasoons/.talon/recordings
+talon user: /home/jasoons/.talon/user
+home: /home/jasoons

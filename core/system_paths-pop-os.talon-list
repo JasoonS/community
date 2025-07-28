@@ -1,0 +1,15 @@
+list: user.system_paths
+hostname: pop-os
+-
+user: /home/jasoons
+profile: /home/jasoons
+desktop: /home/jasoons/Desktop
+desk: /home/jasoons/Desktop
+documents: /home/jasoons/Documents
+docks: /home/jasoons/Documents
+downloads: /home/jasoons/Downloads
+music: /home/jasoons/Music
+pictures: /home/jasoons/Pictures
+videos: /home/jasoons/Videos
+talon home: /home/jasoons/.talon
+talon user: /home/jasoons/.talon/user
